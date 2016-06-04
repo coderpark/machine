@@ -1,6 +1,6 @@
 package com.sh.model;
 
-import org.joda.time.DateTime;
+import java.util.Date;
 
 /**
  * Created by zhaopin on 16/6/4.
@@ -17,9 +17,9 @@ public class Machine extends BaseEntity {
 
     private String factoryTyp;
 
-    private DateTime buyDate;
+    private Date buyDate;
 
-    private DateTime fixDate;
+    private Date fixDate;
 
     private Integer amount;
 
@@ -69,19 +69,19 @@ public class Machine extends BaseEntity {
         this.factoryTyp = factoryTyp;
     }
 
-    public DateTime getBuyDate() {
+    public Date getBuyDate() {
         return buyDate;
     }
 
-    public void setBuyDate(DateTime buyDate) {
+    public void setBuyDate(Date buyDate) {
         this.buyDate = buyDate;
     }
 
-    public DateTime getFixDate() {
+    public Date getFixDate() {
         return fixDate;
     }
 
-    public void setFixDate(DateTime fixDate) {
+    public void setFixDate(Date fixDate) {
         this.fixDate = fixDate;
     }
 

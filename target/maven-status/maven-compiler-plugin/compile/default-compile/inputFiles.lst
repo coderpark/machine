@@ -1,0 +1,13 @@
+/Users/zhaopin/source/machine/src/main/java/com/sh/conf/MyBatisConfig.java
+/Users/zhaopin/source/machine/src/main/java/com/sh/model/BaseEntity.java
+/Users/zhaopin/source/machine/src/main/java/com/sh/model/User.java
+/Users/zhaopin/source/machine/src/main/java/com/sh/service/MachineService.java
+/Users/zhaopin/source/machine/src/main/java/com/sh/mapper/UserMapper.java
+/Users/zhaopin/source/machine/src/main/java/com/sh/model/Machine.java
+/Users/zhaopin/source/machine/src/main/java/com/sh/controller/UserController.java
+/Users/zhaopin/source/machine/src/main/java/com/sh/conf/WebMvcConfig.java
+/Users/zhaopin/source/machine/src/main/java/com/sh/Application.java
+/Users/zhaopin/source/machine/src/main/java/com/sh/mapper/MachineMapper.java
+/Users/zhaopin/source/machine/src/main/java/com/sh/common/MyMapper.java
+/Users/zhaopin/source/machine/src/main/java/com/sh/conf/MyBatisMapperScanConfig.java
+/Users/zhaopin/source/machine/src/main/java/com/sh/service/UserService.java
