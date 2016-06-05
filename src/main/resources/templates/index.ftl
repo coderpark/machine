@@ -76,7 +76,7 @@
             入库信息
         </div>
         <div class="panel-body">
-            <form class="form-inline">
+            <form class="form-inline" action="/addMachine" method="post">
                 <div class="row">
                     <div class="form-group col-sm-4">
                         <label for="inputName">设备名称:</label><input class="form-control input-sm" id="inputName">
