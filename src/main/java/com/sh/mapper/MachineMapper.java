@@ -1,7 +1,7 @@
 package com.sh.mapper;
 
 import com.sh.common.MyMapper;
-import com.sh.model.Machine;
+import com.sh.entity.Machine;
 
 /**
  * Created by zhaopin on 16/6/4.

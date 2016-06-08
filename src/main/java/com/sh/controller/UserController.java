@@ -1,7 +1,7 @@
 package com.sh.controller;
 
 import com.github.pagehelper.PageInfo;
-import com.sh.model.User;
+import com.sh.entity.User;
 import com.sh.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;

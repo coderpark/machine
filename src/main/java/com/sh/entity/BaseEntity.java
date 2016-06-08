@@ -1,4 +1,4 @@
-package com.sh.model;
+package com.sh.entity;
 
 import javax.persistence.*;
 

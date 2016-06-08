@@ -25,5 +25,9 @@
 
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.sh.mapper.UserMapper">
+  
+  <select id="getUserByMail" parameterType="java.lang.String" resultType="com.sh.entity.User">
+
+  </select>
 
 </mapper>

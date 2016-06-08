@@ -24,51 +24,51 @@
             入库信息
         </div>
         <div class="panel-body">
-            <form class="form-inline" action="/addMachine" method="post">
+            <form class="form-inline" action="/machine/save" method="post">
                 <div class="row">
                     <div class="form-group col-sm-4">
-                        <label for="inputName">设备名称:</label><input class="form-control input-sm" id="inputName">
+                        <label for="inputName">设备名称:</label><input class="form-control input-sm" id="inputName" name="name">
                     </div>
                     <div class="form-group col-sm-4">
-                        <label for="inputSerial">序列号:</label><input class="form-control input-sm" id="inputSerial">
+                        <label for="inputSerial">序列号:</label><input class="form-control input-sm" id="inputSerial" name="serial">
                     </div>
                     <div class="form-group col-sm-4">
-                        <label for="inputNum">资产编号:</label><input class="form-control input-sm" id="inputNum">
+                        <label for="inputNum">资产编号:</label><input class="form-control input-sm" id="inputNum" name="assetCode">
                     </div>
                 </div>
                 <div class="row">
                     <div class="form-group col-sm-4">
-                        <label for="inputUnit">单位:</label><input class="form-control input-sm" id="inputUnit">
+                        <label for="inputUnit">单位:</label><input class="form-control input-sm" id="inputUnit" name="unit">
                     </div>
                     <div class="form-group col-sm-4">
-                        <label for="inputTyp">厂牌型号:</label><input class="form-control input-sm" id="inputTyp">
+                        <label for="inputTyp">厂牌型号:</label><input class="form-control input-sm" id="inputTyp" name="factoryTyp">
                     </div>
                     <div class="form-group col-sm-4">
-                        <label for="inputBuyDate">购买日期:</label><input class="form-control input-sm" id="inoutBuyDate" type="text" placeholder="购买日期">
+                        <label for="inputBuyDate">购买日期:</label><input class="form-control input-sm" id="inoutBuyDate" type="text" placeholder="购买日期" name="buyDate">
                     </div>
                 </div>
                 <div class="row">
                     <div class="form-group col-sm-4">
-                        <label for="inputFixDate">保修日期:</label><input class="form-control input-sm" id="inputFixDate" type="text" placeholder="保修日期">
+                        <label for="inputFixDate">保修日期:</label><input class="form-control input-sm" id="inputFixDate" type="text" placeholder="保修日期" name="fixDate">
                     </div>
                     <div class="form-group col-sm-4">
-                        <label for="inputAmount">数量:</label><input type="number" class="form-control input-sm" id="inputAmount">
+                        <label for="inputAmount">数量:</label><input type="number" class="form-control input-sm" id="inputAmount" name="amount">
                     </div>
                     <div class="form-group col-sm-4">
-                        <label for="inputPrice">价格:</label><input type="number" class="form-control input-sm" id="inputPrice">
+                        <label for="inputPrice">价格:</label><input type="number" class="form-control input-sm" id="inputPrice" name="price">
                     </div>
                 </div>
                 <div class="row">
                     <div class="form-group col-sm-12">
-                        <lable for="inputNote">备注:</lable><textarea class="form-control input-sm" rows="1" id="inputNote"></textarea>
+                        <label for="inputNote">备注:</label><textarea class="form-control input-sm" rows="1" id="inputNote" name="note"></textarea>
                     </div>
                 </div>
                 <div class="row">
                     <div class="form-group col-sm-10">
-                        <label for="inputDeploy">设备配置:</label><textarea class="form-control input-sm" id="inputDeploy" rows="1"></textarea>
+                        <label for="inputDeploy">设备配置:</label><textarea class="form-control input-sm" id="inputDeploy" rows="1" name="deploy"></textarea>
                     </div>
                     <div class="form-group col-sm-2">
-                        <button class="btn btn-primary">保存</button>
+                        <input class="btn btn-primary" type="submit" value="保存">
                     </div>
                 </div>
             </form>

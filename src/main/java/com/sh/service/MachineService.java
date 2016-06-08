@@ -2,7 +2,7 @@ package com.sh.service;
 
 import com.github.pagehelper.PageHelper;
 import com.sh.mapper.MachineMapper;
-import com.sh.model.Machine;
+import com.sh.entity.Machine;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -22,5 +22,17 @@ public class MachineService {
             PageHelper.startPage(machine.getPage(), machine.getRows(), "id");
         }
         return machineMapper.selectAll();
+    }
+
+    public Machine getById(Long id) {
+        return machineMapper.selectByPrimaryKey(id);
+    }
+
+    public void save(Machine machine) {
+        machineMapper.insert(machine);
+    }
+
+    public void deleteById(Long id) {
+        machineMapper.deleteByPrimaryKey(id);
     }
 }

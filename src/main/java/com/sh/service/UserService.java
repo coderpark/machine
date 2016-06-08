@@ -2,7 +2,7 @@ package com.sh.service;
 
 import com.github.pagehelper.PageHelper;
 import com.sh.mapper.UserMapper;
-import com.sh.model.User;
+import com.sh.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import tk.mybatis.mapper.entity.Example;

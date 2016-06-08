@@ -1,4 +1,4 @@
-package com.sh.model;
+package com.sh.entity;
 
 import java.util.Date;
 

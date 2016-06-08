@@ -1,4 +1,4 @@
-package com.sh.model;
+package com.sh.entity;
 
 /**
  * Created by zhaopin on 16/5/28.
