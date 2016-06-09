@@ -37,4 +37,10 @@ public class MachineController {
         machineService.save(machine);
         return ReturnT.SUCCESS;
     }
+
+    @RequestMapping(value = "/toBase", method = RequestMethod.GET)
+    public ModelAndView toInBase() {
+        ModelAndView result = new ModelAndView("inBase");
+        return result;
+    }
 }
