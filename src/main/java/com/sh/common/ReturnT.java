@@ -11,7 +11,7 @@ public class ReturnT<T> {
 
     public static final ReturnT<String> SUCCESS = new ReturnT<String>(200, "success");
 
-    public static final ReturnT<String> FAILURE = new ReturnT<>(500, "failure");
+    public static final ReturnT<String> FAILURE = new ReturnT<String>(500, "failure");
 
     public ReturnT(Integer code, T content) {
         this.code = code;
@@ -20,6 +20,22 @@ public class ReturnT<T> {
 
     public ReturnT(T content) {
         this.code = 200;
+        this.content = content;
+    }
+
+    public Integer getCode() {
+        return code;
+    }
+
+    public void setCode(Integer code) {
+        this.code = code;
+    }
+
+    public T getContent() {
+        return content;
+    }
+
+    public void setContent(T content) {
         this.content = content;
     }
 

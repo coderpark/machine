@@ -22,12 +22,12 @@
     <h1><img src="/static/img/icons/posts.png" alt="" /> 设备入库</h1>
 
     <div class="bloc">
-        <form action="/machine/save" method="post">
+        <form action="/machine/save" method="post" id="machineForm">
         <div class="title">设备基本属性</div>
         <div class="content">
             <div class="input">
-                <label for="inputName">设备名称:</label>
-                <input class="form-control input-sm" id="inputName" name="name">
+                <label for="inputName">*设备名称:</label>
+                <input class="form-control input-sm required" id="inputName" name="name">
             </div>
             <div class="input">
                 <label for="inputSerial">设备序列号:</label>
@@ -38,32 +38,28 @@
                 <input class="form-control input-sm" id="inputNum" name="assetCode">
             </div>
             <div class="input">
-                <label for="inputUnit">单位:</label>
-                <input class="form-control input-sm" id="inputUnit" name="unit">
+                <label for="inputUnit">*单位:</label>
+                <input class="form-control input-sm required" id="inputUnit" name="unit">
             </div>
             <div class="input">
                 <label for="inputTyp">厂牌型号:</label>
                 <input class="form-control input-sm" id="inputTyp" name="factoryTyp">
             </div>
             <div class="input">
-                <label for="inputNum">资产编号:</label>
-                <input class="form-control input-sm" id="inputNum" name="assetCode">
+                <label for="inoutBuyDate">*购买日期:</label>
+                <input class="form-control input-sm datepicker required" id="inoutBuyDate" name="buyDate">
             </div>
             <div class="input">
-                <label for="inoutBuyDate">购买日期:</label>
-                <input class="form-control input-sm datepicker" id="inoutBuyDate" name="buyDate">
+                <label for="inputFixDate">*保修日期:</label>
+                <input class="form-control input-sm datepicker required" id="inputFixDate" type="text" name="fixDate">
             </div>
             <div class="input">
-                <label for="inputFixDate">保修日期:</label>
-                <input class="form-control input-sm datepicker" id="inputFixDate" type="text" name="fixDate">
+                <label for="inputAmount">*数量:</label>
+                <input type="number" class="form-control input-sm required" id="inputAmount" name="amount">
             </div>
             <div class="input">
-                <label for="inputAmount">数量:</label>
-                <input type="number" class="form-control input-sm" id="inputAmount" name="amount">
-            </div>
-            <div class="input">
-                <label for="inputPrice">价格:</label>
-                <input type="number" class="form-control input-sm" id="inputPrice" name="price">
+                <label for="inputPrice">*价格:</label>
+                <input type="number" class="form-control input-sm required" id="inputPrice" name="price">
             </div>
             <div class="input">
                 <label for="inputDeploy">设备配置:</label>
@@ -78,7 +74,7 @@
                 <input type="file" id="file" name="pictures"/>
             </div>
             <div class="submit">
-                <input type="submit" value="确认入库" formtarget="content"/>
+                <input type="button" value="确认入库" formtarget="content" onclick="submitMachine()"/>
                 <input type="reset" value="重置" class="white"/>
             </div>
         </div>
@@ -116,7 +112,17 @@
 </body>
 <script>
     function submitMachine(){
-        if()
+        if($(".required").val=="") {
+            alert("必填字段不能为空.");
+            return false;
+        }
+        $.post("/machine/save", $("#machineForm").serialize(), function(r){
+            if(r.code==200){
+                window.location.href = "/machine/list"
+            } else {
+                alert("入库失败.请稍后重试.");
+            }
+        });
     }
 </script>
 </html>

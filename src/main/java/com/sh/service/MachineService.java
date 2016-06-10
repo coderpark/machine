@@ -35,4 +35,8 @@ public class MachineService {
     public void deleteById(Long id) {
         machineMapper.deleteByPrimaryKey(id);
     }
+
+    public Integer getMachineCount() {
+        return machineMapper.getCount();
+    }
 }

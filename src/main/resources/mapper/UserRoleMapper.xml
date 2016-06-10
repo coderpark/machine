@@ -24,10 +24,10 @@
   -->
 
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.sh.mapper.MachineMapper">
+<mapper namespace="com.sh.mapper.UserRoleMapper">
 
-  <select id="getCount" resultType="java.lang.Integer">
-    select count(id) from Machine
+  <select id="gerUsersByRole" parameterType="java.lang.Long" resultType="com.sh.entity.User">
+    select u.* from User u left join UserRole ur on ur.user = u.id where ur.role = #{roleId}
   </select>
 
 </mapper>

@@ -88,7 +88,7 @@
             <ul>
                 <li class="current"><a href="dashboard.html?p=index">Dashboard</a></li>
                 <li><a href="/machine/toBase" target="content">入库管理</a></li>
-                <li><a href="table.html?p=table">Table</a></li>
+                <li><a href="/machine/list" target="content">设备列表</a></li>
                 <li><a href="tabs.html?p=tabs">Tabs</a></li>
                 <li><a href="gallery.html?p=gallery">Gallery</a></li>
                 <li><a href="notifications.html?p=notif">Notifications</a></li>
