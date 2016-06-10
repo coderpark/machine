@@ -9,11 +9,13 @@ public class MachineMove extends BaseEntity {
 
     private Long machine;
 
-    private Long curUser;
+    private Long user;
 
     private Date backTime;
 
     private Boolean isBack;
+
+    private String describ;
 
     private Date created;
 
@@ -25,12 +27,12 @@ public class MachineMove extends BaseEntity {
         this.machine = machine;
     }
 
-    public Long getCurUser() {
-        return curUser;
+    public Long getUser() {
+        return user;
     }
 
-    public void setCurUser(Long curUser) {
-        this.curUser = curUser;
+    public void setUser(Long user) {
+        this.user = user;
     }
 
     public Date getBackTime() {
@@ -52,8 +54,16 @@ public class MachineMove extends BaseEntity {
     public Date getCreated() {
         return created;
     }
-
     public void setCreated(Date created) {
+
         this.created = created;
+    }
+
+    public String getDescrib() {
+        return describ;
+    }
+
+    public void setDescrib(String describ) {
+        this.describ = describ;
     }
 }

@@ -87,9 +87,9 @@
         <li class="current"><a href="#"><img src="/static/img/icons/menu/layout.png" alt="" /> 设备管理</a>
             <ul>
                 <li class="current"><a href="dashboard.html?p=index">Dashboard</a></li>
-                <li><a href="/machine/toBase" target="content">入库管理</a></li>
+                <li><a href="/machine/page/add" target="content">入库管理</a></li>
                 <li><a href="/machine/list" target="content">设备列表</a></li>
-                <li><a href="tabs.html?p=tabs">Tabs</a></li>
+                <li><a href="/move/list" target="content">变更记录</a></li>
                 <li><a href="gallery.html?p=gallery">Gallery</a></li>
                 <li><a href="notifications.html?p=notif">Notifications</a></li>
                 <li><a href="charts.html?p=charts">Charts</a></li>

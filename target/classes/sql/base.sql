@@ -51,11 +51,13 @@ create table RoleAuth(
 `created` timestamp default CURRENT_TIMESTAMP comment '创建时间'
 );
 
-create table MachineMove(
-`id` int(11) not null primary key auto_increment,
-`machine` int(11) not null comment '设备',
-`cur_user` int(11) not null comment '当前借用人',
-`back_time` Date comment '归还日期',
-`is_back` tinyint(1) default 0 comment '是否归还',
-`created` timestamp default CURRENT_TIMESTAMP comment '创建时间'
-);
+CREATE TABLE `Machine_Move` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `machine` int(11) NOT NULL COMMENT '设备',
+  `user` int(11) NOT NULL COMMENT '当前借用人',
+  `back_time` date DEFAULT NULL COMMENT '归还日期',
+  `is_back` tinyint(1) DEFAULT '0' COMMENT '是否归还',
+  `describ` varchar(1000) DEFAULT NULL COMMENT '借用描述',
+  `created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;

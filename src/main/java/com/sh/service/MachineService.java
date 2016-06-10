@@ -32,6 +32,14 @@ public class MachineService {
         machineMapper.insert(machine);
     }
 
+    public void saveOrUpdate(Machine machine) {
+        if(machine.getId() != null && machine.getId() > 0) {
+            machineMapper.updateByPrimaryKey(machine);
+        } else {
+            machineMapper.insert(machine);
+        }
+    }
+
     public void deleteById(Long id) {
         machineMapper.deleteByPrimaryKey(id);
     }

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Your Admin Panel</title>
+    <title>变更列表</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 
 
@@ -18,7 +18,7 @@
 <h1><img src="/static/img/icons/posts.png" alt="" /> Table</h1>
 <div class="bloc">
     <div class="title">
-        设备列表
+        设备变更
     </div>
     <div class="content">
         <table>
@@ -26,32 +26,22 @@
             <tr>
                 <th><input type="checkbox" class="checkall"/></th>
                 <th>设备名称</th>
-                <th>设备序列号</th>
-                <th>资产编号</th>
-                <th>单位</th>
-                <th>厂牌型号</th>
-                <th>购买日期</th>
-                <th>保修日期</th>
-                <th>数量</th>
-                <th>价格</th>
+                <th>借用人</th>
+                <th>归还时间</th>
+                <th>是否归还</th>
                 <th>操作</th>
             </tr>
             </thead>
             <tbody>
-            <#list pageInfo.list as machine>
+            <#list pageInfo.list as move>
             <tr>
                 <td><input type="checkbox" /></td>
-                <td><a href="/machine/edit/${machine.id}">${machine.name!}</a></td>
-                <td>${machine.serial!}</td>
-                <td>${machine.assetCode!}</td>
-                <td>${machine.unit!}</td>
-                <td>${machine.factoryTyp!}</td>
-                <td>${(machine.buyDate?string("yyyy-MM-dd"))!}</td>
-                <td>${(machine.fixDate?string("yyyy-MM-dd"))!}</td>
-                <td>${machine.amount!}</td>
-                <td>${machine.price!}</td>
+                <td><a href="/move/edit/${move.id}">${(move.machineName)!""}</a></td>
+                <td>${(move.userName)!""}</td>
+                <td>${(move.backTime)!""}</td>
+                <td><#if move.isBack?? && move.isBack == true>是<#else>否 </#if></td>
                 <td class="actions">
-                    <a href="##" onclick="move(${machine.id})" title="调度"><img src="/static/img/icons/actions/edit.png" alt="" /></a>
+                    <a href="##" onclick="move(${move.id})" title="调度"><img src="/static/img/icons/actions/edit.png" alt="" /></a>
                     <a href="#" title="Delete this content"><img src="/static/img/icons/actions/delete.png" alt="" /></a>
                 </td>
             </tr>
