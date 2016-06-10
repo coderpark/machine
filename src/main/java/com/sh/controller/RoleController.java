@@ -1,7 +1,6 @@
 package com.sh.controller;
 
 import com.sh.common.ReturnT;
-import com.sh.entity.Role;
 import com.sh.entity.User;
 import com.sh.service.RoleService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,8 +20,8 @@ public class RoleController {
 
     @RequestMapping(value = "/{roleId}/users", method = RequestMethod.GET)
     @ResponseBody
-    public ReturnT<List<User>> getUsersByRole(@PathVariable("roleId") Role role) {
-        List<User> users = roleService.getUsersByRole(role.getId());
+    public ReturnT<List<User>> getUsersByRole(@PathVariable("roleId") Long roleId) {
+        List<User> users = roleService.getUsersByRole(roleId);
         return new ReturnT<List<User>>(users);
     }
 }

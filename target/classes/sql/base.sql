@@ -26,6 +26,7 @@ CREATE TABLE `Machine` (
 create table Role(
 `id` int(11) not null primary key auto_increment,
 `name` varchar(50) not null comment '角色名',
+ `pid` int(11) NOT NULL DEFAULT '0' comment '0: 一级部门',
 `created` timestamp default CURRENT_TIMESTAMP comment '创建时间'
 );
 
