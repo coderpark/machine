@@ -48,11 +48,11 @@
             </div>
             <div class="input">
                 <label for="inoutBuyDate">*购买日期:</label>
-                <input class="form-control input-sm datepicker required" id="inoutBuyDate" name="buyDate" value="${(machine.buyDate)?string("yyyy-MM-dd")!""}">
+                <input class="form-control input-sm datepicker required" id="inoutBuyDate" name="buyDate" value="${(machine.buyDate?string("yyyy-MM-dd"))!""}">
             </div>
             <div class="input">
                 <label for="inputFixDate">*保修日期:</label>
-                <input class="form-control input-sm datepicker required" id="inputFixDate" type="text" name="fixDate" value="${(machine.fixDate)?string("yyyy-MM-dd")!""}">
+                <input class="form-control input-sm datepicker required" id="inputFixDate" type="text" name="fixDate" value="${(machine.fixDate?string("yyyy-MM-dd"))!""}">
             </div>
             <div class="input">
                 <label for="inputAmount">*数量:</label>

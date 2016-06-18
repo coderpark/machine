@@ -38,9 +38,15 @@
     <result column="back_time" property="backTime"/>
   </resultMap>
 
-  <select id="getMoveVO" resultType="MachineMoveVO">
-    select u.name user_name, m.name machine_name, mm.is_back, mm.back_time, mm.id from Machine_Move mm,
-    User u, Machine m where mm.user = u.id and mm.machine = m.id
+  <select id="getMoveVO" resultType="com.sh.model.MachineMoveVO">
+    select
+      mm.id         as id,
+      u.name        as userName,
+      m.name        as machineName,
+      mm.is_back    as isBack,
+      mm.back_time  as backTime
+    from Machine_Move mm, User u, Machine m
+    where mm.user = u.id and mm.machine = m.id
   </select>
 
 </mapper>

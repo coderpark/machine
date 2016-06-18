@@ -38,7 +38,7 @@
                 <td><input type="checkbox" /></td>
                 <td><a href="/move/edit/${move.id}">${(move.machineName)!""}</a></td>
                 <td>${(move.userName)!""}</td>
-                <td>${(move.backTime)!""}</td>
+                <td>${(move.backTime?string("yyyy-MM-dd HH:mm:ss"))!""}</td>
                 <td><#if move.isBack?? && move.isBack == true>是<#else>否 </#if></td>
                 <td class="actions">
                     <a href="##" onclick="move(${move.id})" title="调度"><img src="/static/img/icons/actions/edit.png" alt="" /></a>

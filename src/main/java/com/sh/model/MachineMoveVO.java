@@ -1,13 +1,11 @@
 package com.sh.model;
 
-import com.sh.entity.BaseEntity;
-
 import java.util.Date;
 
 /**
  * Created by zhaopin on 16/6/10.
  */
-public class MachineMoveVO extends BaseEntity {
+public class MachineMoveVO extends BaseVO {
 
 
     private String userName;
@@ -17,6 +15,9 @@ public class MachineMoveVO extends BaseEntity {
     private Date backTime;
 
     private Boolean isBack;
+
+    public MachineMoveVO() {
+    }
 
     public String getUserName() {
         return userName;

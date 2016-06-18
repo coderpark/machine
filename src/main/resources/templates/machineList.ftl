@@ -46,8 +46,8 @@
                 <td>${machine.assetCode!}</td>
                 <td>${machine.unit!}</td>
                 <td>${machine.factoryTyp!}</td>
-                <td>${(machine.buyDate?string("yyyy-MM-dd"))!}</td>
-                <td>${(machine.fixDate?string("yyyy-MM-dd"))!}</td>
+                <td>${(machine.buyDate?string("yyyy-MM-dd"))!""}</td>
+                <td>${(machine.fixDate?string("yyyy-MM-dd"))!""}</td>
                 <td>${machine.amount!}</td>
                 <td>${machine.price!}</td>
                 <td class="actions">
