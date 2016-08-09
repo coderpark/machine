@@ -98,14 +98,13 @@
                 <li><a href="calendar.html?p=calendar">Calendar</a></li>
             </ul>
         </li>
-        <li><a href="#"><img src="/static/img/icons/menu/brush.png" alt="" /> Another submenu</a>
+        <li><a href="#"><img src="/static/img/icons/menu/brush.png" alt="" /> 用户管理</a>
             <ul>
-                <li><a href="#">Fake menu #1</a></li>
-                <li><a href="#">Fake menu #2</a></li>
-                <li><a href="#">Fake menu #3</a></li>
+                <li><a href="/user/all" target="content">用户列表</a></li>
+                <li><a href="#">权限管理</a></li>
             </ul>
         </li>
-        <li><a href="#"><img src="/static/img/icons/menu/brush.png" alt="" /> Infinite sublevel</a>
+        <li><a href="#"><img src="/static/img/icons/menu/brush.png" alt="" />部门管理</a>
             <ul>
                 <li><a href="#">Fake menu #1</a></li>
                 <li><a href="#">Fake menu #2</a></li>
@@ -124,8 +123,8 @@
                 </li>
             </ul>
         </li>
-        <li class="nosubmenu"><a href="#"><img src="img/icons/menu/lab.png" alt="" /> This button is useless</a></li>
-        <li class="nosubmenu"><a href="modal.html" class="zoombox w450 h700"><img src="img/icons/menu/comment.png" alt="" /> Modal box</a></li>
+        <li class="nosubmenu"><a href="#"><img src="/static/img/icons/menu/lab.png" alt="" /> This button is useless</a></li>
+        <li class="nosubmenu"><a href="modal.html" class="zoombox w450 h700"><img src="/static/img/icons/menu/comment.png" alt="" />我的待办</a></li>
     </ul>
 
 

@@ -22,7 +22,7 @@ public class UserController {
 
     @RequestMapping("/all")
     public ModelAndView getAll(User user) {
-        ModelAndView result = new ModelAndView("main");
+        ModelAndView result = new ModelAndView("userList");
         List<User> userList = userService.getAll(user);
         result.addObject("pageInfo", new PageInfo<User>(userList));
         result.addObject("queryParam", user);

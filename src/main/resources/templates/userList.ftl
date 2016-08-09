@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>变更列表</title>
+    <title>用户列表</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 
 
@@ -15,33 +15,33 @@
 </head>
 <body>
 <div id="content" class="white">
-<h1><img src="/static/img/icons/posts.png" alt="" /> 变更记录</h1>
+<h1><img src="/static/img/icons/posts.png" alt="" /> 系统用户</h1>
 <div class="bloc">
     <div class="title">
-        设备变更
+        用户列表
     </div>
     <div class="content">
         <table>
             <thead>
             <tr>
                 <th><input type="checkbox" class="checkall"/></th>
-                <th>设备名称</th>
-                <th>借用人</th>
-                <th>归还时间</th>
-                <th>是否归还</th>
+                <th>ID</th>
+                <th>姓名</th>
+                <th>Email</th>
+                <th>部门</th>
                 <th>操作</th>
             </tr>
             </thead>
             <tbody>
-            <#list pageInfo.list as move>
+            <#list pageInfo.list as user>
             <tr>
                 <td><input type="checkbox" /></td>
-                <td><a href="/move/edit/${move.id}">${(move.machineName)!""}</a></td>
-                <td>${(move.userName)!""}</td>
-                <td>${(move.backTime?string("yyyy-MM-dd HH:mm:ss"))!""}</td>
-                <td><#if move.isBack?? && move.isBack == true>是<#else>否 </#if></td>
+                <td><a href="/move/edit/${user.id}">${(user.id)!""}</a></td>
+                <td>${(user.name)!""}</td>
+                <td>${(user.email)!""}</td>
+                <td>${(user.id)!""}</td>
                 <td class="actions">
-                    <a href="##" onclick="move(${move.id})" title="调度"><img src="/static/img/icons/actions/edit.png" alt="" /></a>
+                    <a href="##" onclick="move(${user.id})" title="调度"><img src="/static/img/icons/actions/edit.png" alt="" /></a>
                     <a href="#" title="Delete this content"><img src="/static/img/icons/actions/delete.png" alt="" /></a>
                 </td>
             </tr>

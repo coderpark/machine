@@ -29,5 +29,9 @@
   <select id="getUserByMail" parameterType="java.lang.String" resultType="com.sh.entity.User">
 
   </select>
+  
+  <select id="getRoles" parameterType="java.lang.Long" resultType="com.sh.entity.Role">
+    select * from UserRole u left join Role r on u.role = r.id where u.user = #{user}
+  </select>
 
 </mapper>

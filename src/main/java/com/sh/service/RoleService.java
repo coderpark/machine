@@ -28,4 +28,8 @@ public class RoleService {
     public List<User> getUsersByRole(Long roleId) {
         return userRoleMapper.gerUsersByRole(roleId);
     }
+
+    public List<Role> getRoles(Long id) {
+        return roleMapper.getRoles(id);
+    }
 }
